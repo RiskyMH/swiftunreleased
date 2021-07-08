@@ -1,0 +1,106 @@
+:root {
+  --bg-color: white;
+  --dark-surface-color: black;
+  --input-color: white;
+  --text-color: black;
+  --text-color-invert: white;
+  --border-ddd: #ddd;
+  --light-grey: #f1f1f1;
+  --button-ccc: #ccc;
+  --button-ccc-invert: #cccccc33;
+  --img-to-invert: 0%;
+  --yellow: #ffeb3b;
+}
+@media (prefers-color-scheme: dark) {
+  /* Dark theme styles go here */
+  :root {
+    --bg-color: #121212;
+    --dark-surface-color: #222222;
+    --input-color: var(--dark-surface-color);
+    --text-color: white;
+    --text-color-invert: black;
+    --border-ddd: #dddddd33;
+    --light-grey: #f1f1f112;
+    --button-ccc: #cccccc33;
+    --button-ccc-invert: #ccc;
+    --img-to-invert: 50%;
+    --yellow: #ffeb3b66;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  /* Light theme styles go here */
+  :root {
+    --bg-color: white;
+    --dark-surface-color: black;
+    --input-color: white;
+    --text-color: black;
+    --text-color-invert: white;
+    --border-ddd: #ddd;
+    --light-grey: #f1f1f1;
+    --button-ccc: #ccc;
+    --button-ccc-invert: #cccccc33;
+    --img-to-invert: 0%;
+    --yellow: #ffeb3b;
+  }
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.w3-black,
+.w3-hover-black:hover {
+  color: white !important;
+  background-color: var(--button-ccc-invert) !important;
+}
+.w3-black,
+.w3-hover-black:hover {
+  color: white !important;
+  background-color: var(--dark-surface-color) !important;
+}
+input.w3-border {
+  border: 1px solid var(--button-ccc) !important;
+}
+footer {
+  color: white;
+  background-color: var(--dark-surface-color);
+}
+input,
+.w3-input,
+.w3-white {
+  color: var(--text-color) !important;
+  background-color: var(--input-color) !important;
+}
+.w3-ul li {
+  border-bottom: 1px solid var(--border-ddd);
+}
+
+.w3-border-light-grey,
+.w3-hover-border-light-grey:hover,
+.w3-border-light-gray,
+.w3-hover-border-light-gray:hover {
+  border-color: var(--light-grey) !important;
+}
+
+img:not(.w3-image) {
+  filter: invert(var(--img-to-invert));
+}
+.w3-button:hover {
+  color: var(--text-color) !important;
+  background-color: var(--button-ccc) !important;
+}
+.w3-light-grey,
+.w3-hover-light-grey:hover,
+.w3-light-gray,
+.w3-hover-light-gray:hover {
+  color: var(--text-color) !important;
+  background-color: var(--light-grey) !important;
+}
+
+.w3-yellow,
+.w3-hover-yellow:hover {
+  color: var(--text-color) !important;
+  background-color: var(--yellow) !important;
+}

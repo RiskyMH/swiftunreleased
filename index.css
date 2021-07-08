@@ -1,10 +1,23 @@
+:root {
+  /* Default variables */
+  --column-count: 3;
+  --column-gap: 20px;
+
+  --xxlarge-size: 36px;
+}
+
 .button-img {
   width: 38px;
   padding: 0px;
+  border: 0;
+  /* makes logo somewhat bolder */
+  /* -webkit-filter: drop-shadow(0 0 0.3px black);
+  filter: drop-shadow(0 0 0.3px black);
+  filter: drop-shadow(0 0 0 0.3px black); */
 }
 
 .button {
-  line-height: 38px;
+  line-height: 36px;
   height: 54px;
   text-align: center;
 }
@@ -13,8 +26,8 @@
   word-wrap: break-word;
 }
 
-.grid {
-  /* margin: 15px; */
+.w3-wide {
+  letter-spacing: 2px;
 }
 
 .center {
@@ -24,70 +37,89 @@
   width: 25%;
   height: 25%;
 }
-
+.print-only {
+  display: none;
+}
+#navbar {
+  font-weight: bold;
+}
+@media print {
+  :root {
+    --column-count: 2;
+    --column-gap: 20px;
+  }
+  .print-not,
+  header,
+  #about,
+  #social-media,
+  #contact,
+  #search-collection {
+    display: none !important;
+  }
+  .print-only,
+  .print {
+    display: initial !important;
+  }
+  #navbar {
+    font-weight: normal;
+  }
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 450px) {
-  .grid {
-    -moz-column-count: 1;
-    -moz-column-gap: 20px;
-    -webkit-column-count: 1;
-    -webkit-column-gap: 20px;
-    column-count: 1;
-    column-gap: 20px;
+  :root {
+    --column-count: 1;
+    --column-gap: 20px;
+
+    --xxlarge-size: 20px;
   }
 
   .w3-xxlarge {
     height: 10px;
-    font-size: 20px !important;
     line-height: 2;
     width: 300px;
   }
 }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 450px) {
-  .grid {
-    -moz-column-count: 2;
-    -moz-column-gap: 20px;
-    -webkit-column-count: 2;
-    -webkit-column-gap: 20px;
-    column-count: 2;
-    column-gap: 20px;
-  }
+  :root {
+    --column-count: 2;
+    --column-gap: 20px;
 
-  .w3-xxlarge {
-    font-size: 25px !important;
+    --xxlarge-size: 25px;
   }
 }
 
-
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .grid {
-    -moz-column-count: 3;
-    -moz-column-gap: 20px;
-    -webkit-column-count: 3;
-    -webkit-column-gap: 20px;
-    column-count: 3;
-    column-gap: 20px;
-  }
+  :root {
+    --column-count: 3;
+    --column-gap: 20px;
 
-  .w3-xxlarge {
-    font-size: 36px !important;
+    --xxlarge-size: 36px;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .grid {
-    -moz-column-count: 4;
-    -moz-column-gap: 20px;
-    -webkit-column-count: 4;
-    -webkit-column-gap: 20px;
-    column-count: 4;
-    column-gap: 20px;
-  }
+  :root {
+    --column-count: 4;
+    --column-gap: 20px;
 
-  .w3-xxlarge {
-    font-size: 36px !important;
+    --xxlarge-size: 36px;
   }
+}
+
+.w3-xxlarge {
+  font-size: var(--xxlarge-size) !important;
+}
+
+.grid {
+  -moz-column-count: var(--column-count);
+  -moz-column-gap: var(--column-gap);
+  -webkit-column-count: var(--column-count);
+  -webkit-column-gap: var(--column-gap);
+  column-count: var(--column-count);
+  column-gap: var(--column-gap);
+  overflow: hidden;
 }
