@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 	<head>
+		<meta charset="UTF-8">
+
 		<title>Swift Unreleased</title>
 		<link rel="icon" href="logo.jpg" type="img/jpg">
 		<link rel="apple-touch-icon" href="logo.jpg">
-		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="template.css">
 		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="template-colour-changes.css">
 	</head>
 
 	<body>
@@ -17,11 +19,12 @@
 		<!-- Navbar (sit on top) -->
 		<div class="w3-top">
 			<div class="w3-bar w3-white w3-wide w3-padding w3-card">
-				<a href="#home" class="w3-bar-item w3-button w3-large"><img class="button-img" src="logo.jpg"><b> Swift
-						Unreleased</b></a>
+				<a href="#home" class="print w3-bar-item w3-button w3-large" id="navbar">
+					<img class="button-img" src="logo.jpg" alt="logo">
+					Swift Unreleased <p class="print-only"> Songs</p></a>
 
 				<!-- Float links to the right. Hide them on small screens -->
-				<div class="w3-right w3-hide-small">
+				<div class="print-not w3-right w3-hide-small">
 					<a href="#about" class="w3-bar-item w3-button button">About</a>
 					<a href="#song-list" class="w3-bar-item w3-button button">Song List</a>
 					<a href="#social-media" class="w3-bar-item w3-button button">Social Media</a>
@@ -45,7 +48,7 @@
 		<!-- Page content -->
 
 		<div class="w3-content w3-padding" style="max-width:1564px">
-
+			<div class="print-only"><br><br><br> </div>
 			<!-- ##### alert message ##### -->
 			<div class="w3-panel w3-yellow w3-display-container w3-round-xlarge" id="message">
 				<!-- if want to close the alert -->
@@ -239,34 +242,47 @@
 					<p><a button href="https://twitter.com"
 							class="w3-button w3-light-grey w3-block">Twitter</button></a></p>
 				</div>
-
-				<!-- Contact Section -->
-				<div class="w3-container w3-padding-32" id="contact">
-					<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-					<p>Lets get in touch, and talk about trading.</p>
-					<form action="mailto:taylorswiftvinyl13@gmail.com?subject=Swift Unreleased Inquiry" method="post"
-						enctype="text/plain" autocomplete="on">
-						<!--text/plain-->
-						<input class="w3-input w3-border" type="text" placeholder="Name" autocomplete="name" required
-							name="Name">
-						<input class="w3-input w3-section w3-border" type="email" autocomplete="email"
-							placeholder="Return Email" required name="Email">
-						<input class="w3-input w3-section w3-border" type="text" spellcheck="true" placeholder="Message"
-							required name="Message">
-						<button class="w3-button w3-black w3-section" type="submit">
-							<i class="fa fa-paper-plane"></i> OPEN IN MAIL
-						</button>
-					</form>
-				</div>
-
-				<!-- End page content -->
 			</div>
 
+			<!-- Contact Section -->
+			<div class="w3-container w3-padding-32" id="contact">
+				<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+				<p>Lets get in touch, and talk about trading.</p>
+				<form action="mailto:taylorswiftvinyl13@gmail.com?subject=Swift Unreleased Inquiry" method="post"
+					enctype="text/plain" autocomplete="on">
+					<!--text/plain-->
+					<input class="w3-input w3-border" type="text" placeholder="Name" autocomplete="name" required
+						name="Name">
+					<input class="w3-input w3-section w3-border" type="email" autocomplete="email"
+						placeholder="Return Email" required name="Email">
+					<input class="w3-input w3-section, w3-border" type="text" spellcheck="true" placeholder="Message"
+						required name="Message">
+					<button class="w3-button w3-black w3-section" type="submit">
+						<i class="fa fa-paper-plane"></i> OPEN IN MAIL
+					</button>
+				</form>
+			</div>
+			<!-- print only stuff -->
+			<div class="print-only">
+				<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact/Social Media</h3>
+				<p>Instagram: <a
+						href="https://www.instagram.com/swiftunreleased">https://www.instagram.com/swiftunreleased</a>
+				</p>
+				<p>Tumblr: <a href="https://tumblr.com">https://tumblr.com</a></p>
+				<p>Twitter: <a href="https://twitter.com">https://twitter.com</a></p>
+				<p>Email: <a href="mailto:taylorswiftvinyl13@gmail.com">TaylorSwiftVinyl13@gmail.com</a></p>
 
-			<!-- Footer -->
-			<footer class="w3-center w3-black w3-padding-16">
-				<p>©SwiftUnreleased™ 2021</p>
-			</footer>
+			</div>
+			<!-- End page content -->
+		</div>
+
+
+
+		<!-- Footer -->
+		<footer class="w3-center w3-padding-16">
+
+			<p>©SwiftUnreleased™ 2021</p>
+		</footer>
 
 	</body>
 
