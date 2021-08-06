@@ -7,13 +7,13 @@ const cacheName = 'SwiftUnreleased';
 
 // IMPORTANT: put everything here that is for offline use
 const filesToCache = [
-   "/",
-        "/index.html",
-        "/index.css",
-        "/template.css",
-        "/template-colour-changes.css",
-        "/logo-bolder.png",
-        "/images/openingimage.jpg",
+   "./",
+        "./index.html",
+        "./index.css",
+        "./template.css",
+        "./template-colour-changes.css",
+        "./logo-bolder.png",
+        "./images/openingimage.jpg",
 ];
 
 // the event handler for the activate event
